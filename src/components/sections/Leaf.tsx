@@ -1,4 +1,5 @@
 import { useLang } from "@/i18n/LanguageContext";
+import leafImage from "@/assets/leaf-macro.jpg";
 
 export const Leaf = () => {
   const { t } = useLang();
@@ -7,8 +8,8 @@ export const Leaf = () => {
       <div className="container-edge grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="md:order-2 relative aspect-[4/5] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1605118401779-78cad1605ed3?auto=format&fit=crop&w=1200&q=80"
-            alt="Tobacco workshop interior"
+            src={leafImage}
+            alt="Macro detail of a cured tobacco leaf"
             className="w-full h-full object-cover"
             loading="lazy"
           />
