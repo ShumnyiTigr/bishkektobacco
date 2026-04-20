@@ -1,4 +1,8 @@
 import { useLang } from "@/i18n/LanguageContext";
+import founderTair from "@/assets/founder-tair.jpg";
+import founderAidar from "@/assets/founder-aidar.jpg";
+
+const PORTRAITS = [founderTair, founderAidar];
 
 export const Founders = () => {
   const { t } = useLang();
@@ -11,17 +15,15 @@ export const Founders = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl">
-          {t.founders.cards.map((c) => (
+          {t.founders.cards.map((c, i) => (
             <article key={c.name} className="bg-[hsl(var(--card))] border border-hairline">
-              <div className="aspect-[4/5] bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--muted))] to-[hsl(var(--card))] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_30%,hsl(var(--accent-gold))_0%,transparent_60%)]" />
-                <span className="font-serif text-gold/30 text-7xl md:text-8xl select-none">
-                  {c.name
-                    .split(" ")
-                    .map((w) => w[0])
-                    .join("")
-                    .slice(0, 2)}
-                </span>
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={PORTRAITS[i]}
+                  alt={c.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div className="p-8">
                 <div className="font-serif text-gold text-xl tracking-wide mb-1">{c.name}</div>
