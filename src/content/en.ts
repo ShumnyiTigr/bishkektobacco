@@ -8,8 +8,8 @@ export const en = {
     no: "No",
   },
   hero: {
-    eyebrow: "EST. 2026 · BISHKEK · KYRGYZSTAN",
-    title: "Handcrafted tobacco.\nFrom American leaf.",
+    eyebrow: "BISHKEK TOBACCO MANUFACTURING · EST. 2026",
+    title: "American leaf.\nMade in Kyrgyzstan.",
     sub: "The first tobacco manufacturing house in Kyrgyzstan. Opening Q1 2027.",
     progressLabel: "FACILITY READINESS",
     progressValue: "70%",
