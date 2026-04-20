@@ -7,8 +7,8 @@ export const Leaf = () => {
       <div className="container-edge grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="md:order-2 relative aspect-[4/5] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1602663491496-73f07481dbea?auto=format&fit=crop&w=1200&q=80"
-            alt="Single tobacco leaf detail"
+            src="https://images.unsplash.com/photo-1605118401779-78cad1605ed3?auto=format&fit=crop&w=1200&q=80"
+            alt="Tobacco workshop interior"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -17,7 +17,8 @@ export const Leaf = () => {
         <div className="md:order-1">
           <div className="eyebrow mb-6">{t.leaf.eyebrow}</div>
           <h2 className="serif-h2 text-ivory mb-8 whitespace-pre-line">{t.leaf.title}</h2>
-          <p className="text-ivory/75 max-w-xl mb-12">{t.leaf.intro}</p>
+          <p className="text-ivory/75 max-w-xl mb-6">{t.leaf.intro}</p>
+          <p className="font-serif italic text-gold/90 max-w-xl mb-12">{t.leaf.rule}</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gold/30">
             {t.leaf.leaves.map((l) => (
