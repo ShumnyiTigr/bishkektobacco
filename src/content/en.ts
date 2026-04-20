@@ -1,5 +1,14 @@
 export const en = {
-  nav: { lang: "EN", langOther: "RU" },
+  nav: { 
+    lang: "EN", 
+    langOther: "RU",
+    roots: "Roots",
+    leaf: "Leaf",
+    portfolio: "Portfolio",
+    standards: "Standards",
+    founders: "Founders",
+    opening: "Contact",
+  },
   ageGate: {
     brand: "BISHKEK TOBACCO MANUFACTURING",
     question: "Are you 18 or older?",
