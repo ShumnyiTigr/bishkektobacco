@@ -1,12 +1,13 @@
 import { useLang } from "@/i18n/LanguageContext";
+import heroImage from "@/assets/hero-facility.jpg";
 
 export const Hero = () => {
   const { t } = useLang();
   return (
     <section id="top" className="relative min-h-[100svh] flex items-end overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1565138146061-e29b079736c0?auto=format&fit=crop&w=2000&q=80"
-        alt="Tobacco manufacturing facility interior"
+        src={heroImage}
+        alt="Bishkek Tobacco Manufacturing facility interior"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
       />
