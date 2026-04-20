@@ -3,39 +3,44 @@ export const en = {
   ageGate: {
     brand: "BISHKEK TOBACCO MANUFACTURING",
     question: "Are you 18 or older?",
-    sub: "This site contains information about tobacco products intended for adults of legal smoking age.",
+    sub: "This site contains information about tobacco products.",
     yes: "Yes, enter",
     no: "No",
   },
   hero: {
     eyebrow: "EST. 2026 · BISHKEK · KYRGYZSTAN",
     title: "Handcrafted tobacco.\nFrom American leaf.",
-    sub: "A new house, built on the oldest craft.",
-    tag: "70% READY",
+    sub: "The first tobacco manufacturing house in Kyrgyzstan. Opening Q1 2027.",
+    progressLabel: "FACILITY READINESS",
+    progressValue: "70%",
+    progressNote: "Equipment installation · Launch Q1 2027",
   },
   roots: {
     eyebrow: "OUR INSPIRATION",
     title: "The oldest craft.\nA new house.",
     body: [
-      "Tobacco has been cured, blended, and aged by hand for four centuries. The recipes that defined the modern cigarette were written in Virginia, Kentucky, and the Balkans.",
-      "We come to that tradition with respect — not to reinvent it, but to keep it honest.",
+      "Tobacco was first cultivated by Native Americans more than three thousand years ago. They understood the leaf, its curing, its patience. Early settlers learned from them — and that knowledge became the foundation of the American tobacco tradition: Virginia, Kentucky, the Carolinas.",
+      "Four centuries later, American tobacco is the world standard. Respected in quality. Demanding in its craft.",
+      "We carry that heritage forward. Into Bishkek. Into Central Asia. Into a new house built on old knowledge.",
     ],
-    closing: "American leaf. Old-world standards. Made in Kyrgyzstan.",
+    closing: "American leaf. American standards. Made in Kyrgyzstan.",
   },
   leaf: {
-    eyebrow: "THE LEAF",
+    eyebrow: "THE FOUNDATION",
     title: "Four leaves.\nNo substitutes.",
-    intro: "Every blend in our portfolio is built from four tobaccos, sourced from the regions that grew them best.",
+    intro:
+      "We use only four tobacco varieties — Virginia, Kentucky, Oriental, and Burley. Every leaf is grown on American soil. Every blend is built from whole leaf.",
+    rule: "No reconstituted tobacco. No blown-up stem. No chemical flavouring.",
     leaves: [
-      { name: "Virginia", note: "Bright, sweet, the spine of every cigarette." },
-      { name: "Kentucky", note: "Dark-fired, full-bodied, the smoke." },
-      { name: "Oriental", note: "Aromatic, sun-cured, the perfume." },
-      { name: "Burley", note: "Air-cured, nutty, the depth." },
+      { name: "Virginia", note: "Bright, sweet. The backbone of American blends." },
+      { name: "Kentucky", note: "Earthy, bold. The Southern classic." },
+      { name: "Oriental", note: "Delicate, aromatic. From the eastern Mediterranean. Cured under sun." },
+      { name: "Burley", note: "Airy, full-bodied. Richness that lets a blend breathe." },
     ],
   },
   footer: {
-    copy: "© 2026 Bishkek Tobacco Manufacturing. Bishkek, Kyrgyzstan.",
-    warning: "Smoking kills. Sale prohibited to persons under 18.",
+    copy: "© 2026 Bishkek Tobacco Manufacturing LLC.",
+    warning: "Informational site. Content intended for adults 18+.",
   },
 };
 
