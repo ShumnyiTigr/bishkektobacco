@@ -22,7 +22,17 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
 
       <div className="container-edge relative z-10 pb-16 md:pb-28 pt-32">
-        <div className="eyebrow mb-6 animate-fade-in">{t.hero.eyebrow}</div>
+        <div className="mb-8 animate-fade-in flex items-baseline gap-x-3 gap-y-1 flex-wrap">
+          <span className="text-sm md:text-base tracking-[0.22em] uppercase text-gold font-medium">
+            Bishkek Tobacco
+          </span>
+          <span className="font-serif italic text-xl md:text-2xl text-gold/95 leading-none">
+            Manufacturing
+          </span>
+          <span className="text-sm md:text-base tracking-[0.22em] uppercase text-gold/70">
+            · Est. 2026
+          </span>
+        </div>
         <h1 className="serif-h1 text-ivory max-w-5xl whitespace-pre-line animate-fade-in">
           {t.hero.title}
         </h1>
