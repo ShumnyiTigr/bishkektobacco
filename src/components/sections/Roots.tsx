@@ -7,8 +7,8 @@ export const Roots = () => {
       <div className="container-edge grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative aspect-[4/5] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=1200&q=80"
-            alt="Vintage tobacco leaf"
+            src="https://images.unsplash.com/photo-1599819177626-b201c2cf4099?auto=format&fit=crop&w=1200&q=80"
+            alt="Tobacco leaves curing"
             className="w-full h-full object-cover grayscale-[0.3] sepia-[0.2]"
             loading="lazy"
           />
