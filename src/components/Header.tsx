@@ -34,8 +34,13 @@ export const Header = () => {
       )}
     >
       <div className="container-edge flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="font-serif text-gold text-base md:text-lg tracking-wide leading-tight shrink-0">
-          BISHKEK <span className="font-normal italic">Tobacco</span> <span className="hidden sm:inline">Manufacturing</span>
+        <a href="#top" className="flex flex-col leading-none shrink-0">
+          <span className="font-sans text-gold text-[13px] md:text-sm tracking-[0.22em] uppercase font-medium">
+            Bishkek Tobacco
+          </span>
+          <span className="font-serif italic text-ivory/75 text-base md:text-lg tracking-wide mt-0.5">
+            Manufacturing
+          </span>
         </a>
 
         {/* Desktop Nav */}

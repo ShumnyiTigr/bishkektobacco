@@ -31,10 +31,7 @@ export const Founders = () => {
                   {c.role}
                 </div>
                 <div className="h-px w-10 bg-gold/60 mb-5" />
-                <p className="text-ivory/75 mb-6">{c.bio}</p>
-                <div className="text-[11px] tracking-[0.22em] text-gold/70 uppercase">
-                  {c.meta}
-                </div>
+                <p className="text-ivory/75">{c.bio}</p>
               </div>
             </article>
           ))}

@@ -1,8 +1,15 @@
 import { useLang } from "@/i18n/LanguageContext";
+import { Check } from "lucide-react";
 import heroImage from "@/assets/hero-facility.jpg";
 
 export const Hero = () => {
   const { t } = useLang();
+  const steps = t.hero.steps;
+  const doneCount = steps.filter((s) => s.state === "done").length;
+  const activeIndex = steps.findIndex((s) => s.state === "active");
+  const filledStops = activeIndex >= 0 ? activeIndex : doneCount;
+  const fillPercent = (filledStops / (steps.length - 1)) * 100;
+
   return (
     <section id="top" className="relative min-h-[100svh] flex items-end overflow-hidden">
       <img
@@ -23,26 +30,61 @@ export const Hero = () => {
           {t.hero.sub}
         </p>
 
-        <div className="mt-12 max-w-md">
-          <div className="flex items-baseline justify-between mb-3">
+        <div className="mt-14 max-w-3xl">
+          <div className="flex items-baseline justify-between mb-6">
             <span className="text-[11px] tracking-[0.25em] text-gold uppercase">
-              {t.hero.progressLabel}
+              {t.hero.roadmapLabel}
             </span>
-            <span className="font-serif text-2xl text-gold">{t.hero.progressValue}</span>
+            <span className="font-serif italic text-base text-gold/90">{t.hero.roadmapNote}</span>
           </div>
-          <div
-            className="h-[3px] w-full bg-hairline overflow-hidden"
-            role="progressbar"
-            aria-valuenow={70}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={t.hero.progressLabel}
-          >
-            <div className="h-full bg-gold" style={{ width: "70%" }} />
+
+          <div className="relative" role="list" aria-label={t.hero.roadmapLabel}>
+            <div className="absolute left-[11px] right-[11px] top-[11px] h-px bg-hairline" aria-hidden />
+            <div
+              className="absolute left-[11px] top-[11px] h-px bg-gold/70 transition-[width] duration-700"
+              style={{ width: `calc((100% - 22px) * ${fillPercent / 100})` }}
+              aria-hidden
+            />
+
+            <div className="relative grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-4">
+              {steps.map((s) => {
+                const done = s.state === "done";
+                const active = s.state === "active";
+                return (
+                  <div key={s.label} className="flex flex-col items-start" role="listitem">
+                    <span
+                      className={
+                        "relative flex h-[22px] w-[22px] items-center justify-center rounded-full border " +
+                        (done
+                          ? "border-gold bg-gold text-background"
+                          : active
+                          ? "border-gold bg-background text-gold"
+                          : "border-hairline bg-background text-ivory/40")
+                      }
+                      aria-hidden
+                    >
+                      {done ? (
+                        <Check size={12} strokeWidth={3} />
+                      ) : (
+                        <span className="block h-1.5 w-1.5 rounded-full bg-current" />
+                      )}
+                      {active && (
+                        <span className="absolute inset-0 rounded-full border border-gold/60 animate-ping" />
+                      )}
+                    </span>
+                    <span
+                      className={
+                        "mt-3 text-[11px] tracking-[0.18em] uppercase leading-snug " +
+                        (active ? "text-gold" : done ? "text-ivory/85" : "text-ivory/45")
+                      }
+                    >
+                      {s.label}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <p className="mt-3 text-xs tracking-[0.18em] text-ivory/60 uppercase">
-            {t.hero.progressNote}
-          </p>
         </div>
       </div>
     </section>
