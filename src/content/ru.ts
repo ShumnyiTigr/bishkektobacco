@@ -3,7 +3,7 @@ import type { Dict } from "./en";
 export const ru: Dict = {
   nav: { lang: "RU", langOther: "EN" },
   ageGate: {
-    brand: "KYRGYZ TOBACCO",
+    brand: "BISHKEK TOBACCO MANUFACTURING",
     question: "Вам уже 18?",
     sub: "Сайт содержит информацию о табачных изделиях и предназначен для совершеннолетних.",
     yes: "Да, войти",
@@ -36,7 +36,7 @@ export const ru: Dict = {
     ],
   },
   footer: {
-    copy: "© 2026 KYRGYZ TOBACCO. Бишкек, Кыргызстан.",
+    copy: "© 2026 Bishkek Tobacco Manufacturing. Бишкек, Кыргызстан.",
     warning: "Курение убивает. Продажа запрещена лицам младше 18 лет.",
   },
 };

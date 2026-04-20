@@ -1,7 +1,7 @@
 export const en = {
   nav: { lang: "EN", langOther: "RU" },
   ageGate: {
-    brand: "KYRGYZ TOBACCO",
+    brand: "BISHKEK TOBACCO MANUFACTURING",
     question: "Are you 18 or older?",
     sub: "This site contains information about tobacco products intended for adults of legal smoking age.",
     yes: "Yes, enter",
@@ -34,7 +34,7 @@ export const en = {
     ],
   },
   footer: {
-    copy: "© 2026 KYRGYZ TOBACCO. Bishkek, Kyrgyzstan.",
+    copy: "© 2026 Bishkek Tobacco Manufacturing. Bishkek, Kyrgyzstan.",
     warning: "Smoking kills. Sale prohibited to persons under 18.",
   },
 };
