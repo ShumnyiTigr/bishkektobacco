@@ -21,8 +21,8 @@ export const Header = () => {
       }`}
     >
       <div className="container-edge flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="font-serif text-gold text-lg md:text-xl tracking-wide">
-          KYRGYZ <span className="font-normal italic">TOBACCO</span>
+        <a href="#top" className="font-serif text-gold text-base md:text-lg tracking-wide leading-tight">
+          BISHKEK <span className="font-normal italic">Tobacco</span> <span className="hidden sm:inline">Manufacturing</span>
         </a>
         <div className="flex items-center gap-2 text-xs tracking-[0.2em]">
           <button
