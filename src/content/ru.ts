@@ -1,7 +1,16 @@
 import type { Dict } from "./en";
 
 export const ru: Dict = {
-  nav: { lang: "RU", langOther: "EN" },
+  nav: { 
+    lang: "RU", 
+    langOther: "EN",
+    roots: "Корни",
+    leaf: "Лист",
+    portfolio: "Бренды",
+    standards: "Стандарты",
+    founders: "Команда",
+    opening: "Контакты",
+  },
   ageGate: {
     brand: "BISHKEK TOBACCO MANUFACTURING",
     question: "Вам уже 18?",

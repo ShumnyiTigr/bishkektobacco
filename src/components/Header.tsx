@@ -1,9 +1,21 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/i18n/LanguageContext";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const Header = () => {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { id: "roots", label: t.nav.roots },
+    { id: "leaf", label: t.nav.leaf },
+    { id: "portfolio", label: t.nav.portfolio },
+    { id: "standards", label: t.nav.standards },
+    { id: "founders", label: t.nav.founders },
+    { id: "opening", label: t.nav.opening },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -14,17 +26,32 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/85 backdrop-blur-md border-b border-hairline"
           : "bg-transparent"
-      }`}
+      )}
     >
       <div className="container-edge flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="font-serif text-gold text-base md:text-lg tracking-wide leading-tight">
+        <a href="#top" className="font-serif text-gold text-base md:text-lg tracking-wide leading-tight shrink-0">
           BISHKEK <span className="font-normal italic">Tobacco</span> <span className="hidden sm:inline">Manufacturing</span>
         </a>
-        <div className="flex items-center gap-2 text-xs tracking-[0.2em]">
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-6 text-xs tracking-wide">
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="text-ivory/70 hover:text-gold transition-colors uppercase"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2 text-xs tracking-[0.2em] shrink-0">
           <button
             onClick={() => setLang("en")}
             className={`transition-colors ${lang === "en" ? "text-gold" : "text-ivory/50 hover:text-ivory"}`}
@@ -38,8 +65,35 @@ export const Header = () => {
           >
             RU
           </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden ml-2 p-1 text-ivory/70 hover:text-gold transition-colors"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Nav */}
+      {mobileOpen && (
+        <div className="lg:hidden bg-background/95 backdrop-blur-md border-b border-hairline">
+          <nav className="container-edge py-4 flex flex-col gap-3">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm text-ivory/80 hover:text-gold transition-colors uppercase tracking-wide py-1"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
